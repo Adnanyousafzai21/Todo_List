@@ -1,38 +1,106 @@
-.App {
+@import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #021a20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo {
+  border-radius: 8px;
+  min-width: 30%;
+  padding: 0px 10px;
+}
+.todo_title {
+  color: #ffffff;
+  margin: 15px 0px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.write .fa {
+  padding: 4px;
+  border-radius: 35px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.write .fa:hover {
+  color: rgb(104, 216, 104)
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.write {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 3px;
 }
 
-.App-link {
-  color: #61dafb;
+.write:hover {
+  background-color: #f7f7f1
+} 
+.input {
+  font-weight: 400;
+  outline: none;
+  border: none;
+  width: 88%;
+  color: #000000;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.icons i:last-child {
+  margin-left: 3px;
+}
+
+.icons i:first-child:hover {
+  color: rgb(104, 216, 104)
+}
+
+.icons i:last-child:hover {
+  color: red;
+}
+
+.icons i:first-child:hover {
+  box-shadow: 4px 4px 3px solid #f9f9f9;
+
+}
+
+.fa {
+  color: skyblue;
+  transition: all 0.2s linear;
+}
+
+.list {
+  padding: 0px;
+  margin: 0px;
+  margin-top: 30px;
+  list-style-type: none;
+  width: 100%;
+}
+
+.list_item {
+  width: 100%;
+  color: #ffffff;
+ flex-wrap: wrap;
+  margin: 10px 0px;
+  width: 100%;
+  display: flex;
+  padding: 0px 5px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 900px) {
+  .todo{
+    width: 70%;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width: 500px) {
+  .todo{
+    width: 90%;
   }
 }
