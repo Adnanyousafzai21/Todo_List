@@ -44,6 +44,11 @@ const App = () => {
     setData(Edit.name);
     setisedit(id)
   };
+  const Clear =()=>{
+    setItem([])
+  }
+  const [clear, setClear]=useState(false)
+
   return (
     <div className="container">
       <div className="todo">
@@ -78,6 +83,9 @@ const App = () => {
             );
           })}
         </ul>
+       { clear?<div className="clear">
+          <button onClick={Clear}>Clear All</button>
+        </div>:""}
       </div>
     </div>
   );
